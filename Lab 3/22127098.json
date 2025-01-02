@@ -1,0 +1,435 @@
+[
+    {
+        "id": "c0193307f4dcce1c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f172cd545d237aa6",
+        "type": "ui_button",
+        "z": "c0193307f4dcce1c",
+        "name": "Button",
+        "group": "92737fbeb04bac2e",
+        "order": 1,
+        "width": 8,
+        "height": 1,
+        "passthru": false,
+        "label": "Button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "star",
+        "payload": "Clicked",
+        "payloadType": "str",
+        "topic": "Button",
+        "topicType": "str",
+        "x": 310,
+        "y": 80,
+        "wires": [
+            [
+                "919cc396334b0b5a"
+            ]
+        ]
+    },
+    {
+        "id": "2655199c273d182f",
+        "type": "ui_dropdown",
+        "z": "c0193307f4dcce1c",
+        "name": "Choices",
+        "label": "Choices",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "92737fbeb04bac2e",
+        "order": 2,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "multiple": true,
+        "options": [
+            {
+                "label": "Choice 1 : string",
+                "value": "Hello",
+                "type": "str"
+            },
+            {
+                "label": "Choice 2 : numeric",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "Choice 3 : bool",
+                "value": "true",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "Dropdown",
+        "topicType": "str",
+        "className": "",
+        "x": 300,
+        "y": 160,
+        "wires": [
+            [
+                "919cc396334b0b5a"
+            ]
+        ]
+    },
+    {
+        "id": "ef798def06117298",
+        "type": "ui_switch",
+        "z": "c0193307f4dcce1c",
+        "name": "Switch",
+        "label": "Switch",
+        "tooltip": "",
+        "group": "92737fbeb04bac2e",
+        "order": 3,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "Switch",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 310,
+        "y": 240,
+        "wires": [
+            [
+                "919cc396334b0b5a"
+            ]
+        ]
+    },
+    {
+        "id": "6c0813e2c232f146",
+        "type": "ui_slider",
+        "z": "c0193307f4dcce1c",
+        "name": "Slider",
+        "label": "Slider",
+        "tooltip": "",
+        "group": "92737fbeb04bac2e",
+        "order": 4,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "Slider",
+        "topicType": "str",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 310,
+        "y": 320,
+        "wires": [
+            [
+                "919cc396334b0b5a"
+            ]
+        ]
+    },
+    {
+        "id": "349c254297ee5299",
+        "type": "ui_numeric",
+        "z": "c0193307f4dcce1c",
+        "name": "Numeric",
+        "label": "Numeric",
+        "tooltip": "",
+        "group": "92737fbeb04bac2e",
+        "order": 5,
+        "width": 8,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "Numeric",
+        "topicType": "str",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "919cc396334b0b5a"
+            ]
+        ]
+    },
+    {
+        "id": "1309fa356165ba8a",
+        "type": "ui_text_input",
+        "z": "c0193307f4dcce1c",
+        "name": "Change text",
+        "label": "Change text",
+        "tooltip": "",
+        "group": "92737fbeb04bac2e",
+        "order": 6,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "Text input",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 290,
+        "y": 480,
+        "wires": [
+            [
+                "919cc396334b0b5a"
+            ]
+        ]
+    },
+    {
+        "id": "2e7ad9b30282969a",
+        "type": "ui_template",
+        "z": "c0193307f4dcce1c",
+        "group": "73fb0883847a382a",
+        "name": "Logs",
+        "order": 1,
+        "width": 8,
+        "height": 10,
+        "format": "<ul>\n    <li ng-repeat=\"x in msg.payload\">\n        <font color=\"red\">{{x.topic}}</font>\n        <ul>\n            <li>{{x.payload}}</li>\n        </ul>\n    </li>\n</ul>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 970,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "919cc396334b0b5a",
+        "type": "function",
+        "z": "c0193307f4dcce1c",
+        "name": "Print the new event",
+        "func": "// create log object using the topic and payload from msg\nlet log = {\n    \"topic\": msg.topic,\n    \"payload\": msg.payload,\n}\n\n// retrieve the logs from the flow context\n// if it does not exist, set it as empty\nlet logs = flow.get(\"eventLogs\") || [];\n\n// add the new log to the end of the logs\nlogs.push(log);\n\n// if the logs array has more than 10 elements, remove the oldest log\nwhile (logs.length > 10)\n    logs.shift();\n\n// save the updated logs to the flow context\nflow.set(\"eventLogs\",logs);\n\n// update the new payload\nmsg.payload = logs;\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 280,
+        "wires": [
+            [
+                "2e7ad9b30282969a"
+            ]
+        ]
+    },
+    {
+        "id": "5796961636c9a34b",
+        "type": "ui_text_input",
+        "z": "c0193307f4dcce1c",
+        "name": "Name",
+        "label": "Name *",
+        "tooltip": "",
+        "group": "ce06f5ae12f10afe",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "Name",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 310,
+        "y": 560,
+        "wires": [
+            [
+                "fefa3aafb2da5199"
+            ]
+        ]
+    },
+    {
+        "id": "5bfe97085394c474",
+        "type": "ui_text_input",
+        "z": "c0193307f4dcce1c",
+        "name": "Student Id",
+        "label": "Student Id *",
+        "tooltip": "",
+        "group": "ce06f5ae12f10afe",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "Student_id",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 290,
+        "y": 640,
+        "wires": [
+            [
+                "fefa3aafb2da5199"
+            ]
+        ]
+    },
+    {
+        "id": "55e7c16ab4896920",
+        "type": "ui_text_input",
+        "z": "c0193307f4dcce1c",
+        "name": "Class Id",
+        "label": "Class Id *",
+        "tooltip": "",
+        "group": "ce06f5ae12f10afe",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "Class_id",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 300,
+        "y": 720,
+        "wires": [
+            [
+                "fefa3aafb2da5199"
+            ]
+        ]
+    },
+    {
+        "id": "ab60296bdbd0437c",
+        "type": "ui_button",
+        "z": "c0193307f4dcce1c",
+        "name": "Submit",
+        "group": "ce06f5ae12f10afe",
+        "order": 4,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Submit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Submit",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 300,
+        "y": 800,
+        "wires": [
+            [
+                "fefa3aafb2da5199"
+            ]
+        ]
+    },
+    {
+        "id": "fefa3aafb2da5199",
+        "type": "function",
+        "z": "c0193307f4dcce1c",
+        "name": "Show notification",
+        "func": "// get data from flow context\nvar name = flow.get('Name') || '';\nvar student_id = flow.get('Student_id') || '';\nvar class_id = flow.get('Class_id') || '';\n\n// check if submit is pressed\nif (msg.payload == 'Submit') {\n    // create notification\n    if (name && student_id && class_id) {\n        msg.payload = `Hello ${name}, MSSV: ${student_id}`;\n    } else {\n        msg.payload = 'Please fill all the text input!';\n    }\n    return msg;\n} else {\n    // store data from node input into flow context\n    flow.set(msg.topic, msg.payload);\n    return null;\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 680,
+        "wires": [
+            [
+                "40a65e119ad09a7a"
+            ]
+        ]
+    },
+    {
+        "id": "40a65e119ad09a7a",
+        "type": "ui_toast",
+        "z": "c0193307f4dcce1c",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Notification",
+        "x": 970,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e52404266272d5b",
+        "type": "ui_spacer",
+        "z": "c0193307f4dcce1c",
+        "name": "spacer",
+        "group": "ce06f5ae12f10afe",
+        "order": 5,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "92737fbeb04bac2e",
+        "type": "ui_group",
+        "name": "UI Elements",
+        "tab": "458c7c7f167c9224",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "73fb0883847a382a",
+        "type": "ui_group",
+        "name": "Logs",
+        "tab": "458c7c7f167c9224",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ce06f5ae12f10afe",
+        "type": "ui_group",
+        "name": "My Information",
+        "tab": "458c7c7f167c9224",
+        "order": 3,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "458c7c7f167c9224",
+        "type": "ui_tab",
+        "name": "Event Logs",
+        "icon": "",
+        "disabled": false,
+        "hidden": false
+    }
+]
